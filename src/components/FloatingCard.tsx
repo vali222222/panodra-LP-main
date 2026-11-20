@@ -45,7 +45,7 @@ const FloatingCard = () => {
               <div className="absolute inset-4 sm:inset-5 rounded-full bg-primary" />
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-              Target
+              PANDORA
             </h1>
           </div>
         </div>
