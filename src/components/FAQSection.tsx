@@ -9,20 +9,20 @@ import { Heart } from "lucide-react";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "How do I claim my $750 Target Reward?",
+      question: "How do I claim my $500 Pandora Reward?",
       answer: "Simply click the 'Start Now' button, enter your basic info, complete required offers, and your reward will be processed."
     },
     {
       question: "Is this offer really free?",
-      answer: "Yes! There are no hidden fees. You just need to complete the required steps to qualify for your Target reward."
+      answer: "Yes! There are no hidden fees. You just need to complete the required steps to qualify for your Pandora reward."
     },
     {
       question: "How long does it take to receive my reward?",
-      answer: "Once you've completed all required steps, your Target reward will be processed and delivered within 24-48 business hours."
+      answer: "Once you've completed all required steps, your Pandora reward will be processed and delivered within 24-48 business hours."
     },
     {
-      question: "Can I use this reward on any Target purchase?",
-      answer: "Absolutely! Your $750 Target reward can be used on any item in-store or online at Target.com."
+      question: "Can I use this reward on any Pandora purchase?",
+      answer: "Absolutely! Your $500 Pandora reward can be used on any item in-store or online at Target.com."
     },
     {
       question: "Is my information secure?",
