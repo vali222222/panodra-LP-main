@@ -31,11 +31,11 @@ const Index = () => {
       <div className="text-center mt-8 mb-4">
         <div className="flex items-center justify-center gap-2 mb-2">
           <span className="text-sm font-medium text-muted-foreground">
-            🎯 Exclusive Target Rewards
+            💍 Exclusive Pandora Rewards
           </span>
         </div>
         <p className="text-xs text-muted-foreground/60">
-          © 2026 Target Promo • All rights reserved
+          © 2026 Pandora Promo • All rights reserved
         </p>
       </div>
     </div>
