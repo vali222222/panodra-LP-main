@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ArrowRight, CheckCircle2, Sparkles, ShoppingBag, Users, Gift } from "lucide-react";
 
@@ -34,16 +33,12 @@ const FloatingCard = () => {
           <Sparkles className="w-full h-full" />
         </div>
         
-        {/* Target Logo */}
+        {/* Pandora Logo */}
         <div className="text-center mb-4 animate-fade-in-up relative z-10">
           <div className="inline-flex items-center gap-3">
-            {/* Target bullseye logo */}
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <div className="absolute inset-0 rounded-full bg-[#E27BA0]" />
-              <div className="absolute inset-1 rounded-full bg-white" />
-              <div className="absolute inset-2 rounded-full bg-[#E27BA0]" />
-              <div className="absolute inset-3 rounded-full bg-white" />
-              <div className="absolute inset-4 sm:inset-5 rounded-full bg-[#E27BA0]" />
+            {/* Pandora Ring Emoji */}
+            <div className="text-[42px] sm:text-[48px] leading-none">
+              💍
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#000000] tracking-tight">
               PANDORA
@@ -61,7 +56,7 @@ const FloatingCard = () => {
         {/* Promo message */}
         <div className="text-center mb-4 animate-fade-in-up-delay-1">
           <p className="text-xs sm:text-sm text-[#65535D] font-medium">
-            💍 Exclusive Pandora Promotion 💍
+             Exclusive Pandora Promotion 
           </p>
         </div>
 
