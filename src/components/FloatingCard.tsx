@@ -60,7 +60,7 @@ const FloatingCard = () => {
         {/* Promo message */}
         <div className="text-center mb-4 animate-fade-in-up-delay-1">
           <p className="text-xs sm:text-sm text-muted-foreground font-medium">
-            🎯 Exclusive Target Promotion 🎯
+            💍 Exclusive Pandora Promotion 💍
           </p>
         </div>
 
@@ -83,7 +83,7 @@ const FloatingCard = () => {
                   Exclusive Reward Value
                 </p>
                 <p className="font-display text-4xl sm:text-5xl font-bold text-white drop-shadow-lg">
-                  $750
+                  $500
                 </p>
               </div>
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -181,12 +181,12 @@ const FloatingCard = () => {
 
         {/* Footer text */}
         <p className="text-center text-[10px] sm:text-xs text-muted-foreground mt-4 animate-fade-in-up-delay-4">
-          🎯 Limited time promotion • Terms apply
+          💍 Limited time promotion • Terms apply
         </p>
         
         {/* Disclaimer */}
         <p className="text-center text-[8px] sm:text-[10px] text-muted-foreground/60 mt-3">
-          This promotion is not sponsored, endorsed, or affiliated with Target Corporation.
+          This promotion is not sponsored, endorsed, or affiliated with Pandora Corporation.
         </p>
       </div>
     </div>
