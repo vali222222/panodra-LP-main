@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Heart, Gift, Sparkles } from "lucide-react";
 
