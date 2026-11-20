@@ -124,7 +124,7 @@ const WinnerNotification = () => {
               <span className="truncate">{currentWinner.name}</span>
             </p>
             <p className="text-xs text-muted-foreground">
-              claimed their <span className="text-primary font-semibold">$750 Reward</span>
+              claimed their <span className="text-primary font-semibold">$500 Reward</span>
             </p>
             <p className="text-[10px] text-muted-foreground/70">
               {currentWinner.city} • {currentWinner.time}
