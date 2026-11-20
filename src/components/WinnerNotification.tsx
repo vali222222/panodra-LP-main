@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Heart, Gift, Sparkles } from "lucide-react";
 
@@ -26,12 +27,12 @@ const timeAgo = [
 
 const WinnerNotification = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   const [currentWinner, setCurrentWinner] = useState({
     name: "",
     city: "",
     time: ""
   });
-  const [confetti, setConfetti] = useState<Array<{ id: number; left: number; delay: number; size: number }>>([]);
 
   const generateWinner = () => {
     return {
@@ -39,15 +40,6 @@ const WinnerNotification = () => {
       city: cities[Math.floor(Math.random() * cities.length)],
       time: timeAgo[Math.floor(Math.random() * timeAgo.length)]
     };
-  };
-
-  const generateConfetti = () => {
-    return Array.from({ length: 12 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      delay: Math.random() * 0.5,
-      size: 8 + Math.random() * 8
-    }));
   };
 
   useEffect(() => {
@@ -61,13 +53,12 @@ const WinnerNotification = () => {
 
   const showNotification = () => {
     setCurrentWinner(generateWinner());
-    setConfetti(generateConfetti());
     setIsVisible(true);
 
     // Hide after 4 seconds
     setTimeout(() => {
       setIsVisible(false);
-      
+
       // Show next notification after 4-5 seconds
       const nextDelay = 4000 + Math.random() * 1000;
       setTimeout(showNotification, nextDelay);
@@ -76,65 +67,51 @@ const WinnerNotification = () => {
 
   return (
     <>
-      {/* Confetti overlay when notification is visible */}
-      {isVisible && (
-        <div className="fixed inset-0 pointer-events-none z-[60] overflow-hidden">
-          {confetti.map((piece) => (
-            <div
-              key={piece.id}
-              className="absolute animate-confetti-fall"
-              style={{
-                left: `${piece.left}%`,
-                animationDelay: `${piece.delay}s`,
-                top: "-20px"
-              }}
-            >
-              <Heart 
-                className="text-primary fill-primary opacity-80"
-                style={{ width: piece.size, height: piece.size }}
-              />
-            </div>
-          ))}
-        </div>
-      )}
-
       {/* Notification toast */}
       <div
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-[70] transition-all duration-500 ease-out ${
-          isVisible 
-            ? "translate-y-0 opacity-100" 
+          isVisible
+            ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
         }`}
       >
-        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-float border border-primary/20 px-4 py-3 flex items-center gap-3 min-w-[280px] max-w-[340px]">
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-float border border-[#E27BA0]/20 px-4 py-3 flex items-center gap-3 min-w-[280px] max-w-[340px]">
+
           {/* Icon */}
           <div className="relative flex-shrink-0">
-            <div className="w-10 h-10 rounded-full bg-gradient-target flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#E27BA0] to-[#B74D77] flex items-center justify-center">
               <Gift className="w-5 h-5 text-white" />
             </div>
-            <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#B74D77] rounded-full flex items-center justify-center">
               <Sparkles className="w-2.5 h-2.5 text-white" />
             </div>
           </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-semibold text-foreground flex items-center gap-1">
-              <Heart className="w-3 h-3 text-primary fill-primary animate-heart-beat flex-shrink-0" />
+            <p className="text-sm font-semibold text-[#000000] flex items-center gap-1">
+              <Heart className="w-3 h-3 text-[#E27BA0] fill-[#E27BA0] animate-heart-beat flex-shrink-0" />
               <span className="truncate">{currentWinner.name}</span>
             </p>
-            <p className="text-xs text-muted-foreground">
-              claimed their <span className="text-primary font-semibold">$500 Reward</span>
+
+            <p className="text-xs text-[#65535D]">
+              claimed their{" "}
+              <span className="text-[#B74D77] font-semibold">
+                $500 Reward
+              </span>
             </p>
-            <p className="text-[10px] text-muted-foreground/70">
+
+            <p className="text-[10px] text-[#65535D]/70">
               {currentWinner.city} • {currentWinner.time}
             </p>
           </div>
 
           {/* Close indicator */}
           <div className="flex-shrink-0">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-[#B74D77] animate-pulse" />
           </div>
+
         </div>
       </div>
     </>
