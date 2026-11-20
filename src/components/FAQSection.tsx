@@ -1,10 +1,10 @@
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Heart } from "lucide-react";
 
 const FAQSection = () => {
   const faqs = [
@@ -33,23 +33,23 @@ const FAQSection = () => {
   return (
     <div className="w-full max-w-md mx-auto px-4 mt-8 mb-12">
       <div className="flex items-center justify-center gap-2 mb-6">
-        <Heart className="w-5 h-5 text-primary fill-primary" />
         <h2 className="font-display text-2xl font-bold text-foreground text-center">
           Frequently Asked Questions
         </h2>
-        <Heart className="w-5 h-5 text-primary fill-primary" />
       </div>
+
       <div className="bg-card rounded-2xl shadow-md p-4 border border-secondary">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`item-${index}`}
               className="border-border/50"
             >
               <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:text-primary hover:no-underline py-4">
                 {faq.question}
               </AccordionTrigger>
+
               <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-4">
                 {faq.answer}
               </AccordionContent>
