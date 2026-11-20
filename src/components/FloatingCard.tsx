@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ArrowRight, CheckCircle2, Sparkles, ShoppingBag, Users, Gift } from "lucide-react";
 
@@ -24,12 +25,12 @@ const FloatingCard = () => {
 
   return (
     <div className="animate-float">
-      <div className="bg-gradient-card rounded-3xl shadow-giftcard p-5 sm:p-8 mx-2 sm:mx-4 relative overflow-hidden border border-secondary">
+      <div className="bg-gradient-to-b from-[#FFFFFF] via-[#FFF5F9] to-[#FCE8F0] rounded-3xl shadow-giftcard p-5 sm:p-8 mx-2 sm:mx-4 relative overflow-hidden border border-[#F1D7E0]">
         {/* Decorative elements */}
-        <div className="absolute top-3 right-4 w-6 h-6 text-accent/20">
+        <div className="absolute top-3 right-4 w-6 h-6 text-[#E27BA0]/20">
           <Gift className="w-full h-full" />
         </div>
-        <div className="absolute bottom-16 right-6 w-5 h-5 text-accent/15">
+        <div className="absolute bottom-16 right-6 w-5 h-5 text-[#E27BA0]/15">
           <Sparkles className="w-full h-full" />
         </div>
         
@@ -38,13 +39,13 @@ const FloatingCard = () => {
           <div className="inline-flex items-center gap-3">
             {/* Target bullseye logo */}
             <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <div className="absolute inset-0 rounded-full bg-primary" />
+              <div className="absolute inset-0 rounded-full bg-[#E27BA0]" />
               <div className="absolute inset-1 rounded-full bg-white" />
-              <div className="absolute inset-2 rounded-full bg-primary" />
+              <div className="absolute inset-2 rounded-full bg-[#E27BA0]" />
               <div className="absolute inset-3 rounded-full bg-white" />
-              <div className="absolute inset-4 sm:inset-5 rounded-full bg-primary" />
+              <div className="absolute inset-4 sm:inset-5 rounded-full bg-[#E27BA0]" />
             </div>
-            <h1 className="font-display text-3xl sm:text-4xl font-bold text-primary tracking-tight">
+            <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#000000] tracking-tight">
               PANDORA
             </h1>
           </div>
@@ -52,21 +53,21 @@ const FloatingCard = () => {
 
         {/* Elegant divider */}
         <div className="flex items-center justify-center gap-3 mb-4 animate-fade-in-up-delay-1">
-          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent flex-1" />
-          <Sparkles className="w-4 h-4 text-accent animate-sparkle" />
-          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent flex-1" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#E8C6D3] to-transparent flex-1" />
+          <Sparkles className="w-4 h-4 text-[#E27BA0] animate-sparkle" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#E8C6D3] to-transparent flex-1" />
         </div>
 
         {/* Promo message */}
         <div className="text-center mb-4 animate-fade-in-up-delay-1">
-          <p className="text-xs sm:text-sm text-muted-foreground font-medium">
+          <p className="text-xs sm:text-sm text-[#65535D] font-medium">
             💍 Exclusive Pandora Promotion 💍
           </p>
         </div>
 
         {/* Reward Preview */}
         <div className="relative mb-5 animate-fade-in-up-delay-1">
-          <div className="bg-gradient-target rounded-xl p-4 sm:p-5 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#E27BA0] via-[#D46992] to-[#B74D77] rounded-xl p-4 sm:p-5 relative overflow-hidden">
             {/* Pattern overlay */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-2 right-4 w-5 h-5 text-white">
@@ -102,13 +103,13 @@ const FloatingCard = () => {
 
         {/* Elegant divider */}
         <div className="flex items-center justify-center gap-3 mb-4 animate-fade-in-up-delay-2">
-          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent flex-1" />
-          <div className="w-3 h-3 rounded-full bg-primary" />
-          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent flex-1" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#E8C6D3] to-transparent flex-1" />
+          <div className="w-3 h-3 rounded-full bg-[#E27BA0]" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#E8C6D3] to-transparent flex-1" />
         </div>
 
         {/* Steps card */}
-        <div className="bg-secondary/60 rounded-xl p-3 sm:p-4 mb-5 animate-fade-in-up-delay-2 relative z-10 border border-secondary">
+        <div className="bg-[#FBE9F0]/60 rounded-xl p-3 sm:p-4 mb-5 animate-fade-in-up-delay-2 relative z-10 border border-[#F1D7E0]">
           <div className="space-y-2.5">
             {steps.map((step, index) => (
               <div
@@ -116,16 +117,16 @@ const FloatingCard = () => {
                 className="flex items-center gap-2.5"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary flex items-center justify-center shadow-badge flex-shrink-0">
-                  <span className="text-primary-foreground font-semibold text-[10px] sm:text-xs">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#E27BA0] flex items-center justify-center shadow-badge flex-shrink-0">
+                  <span className="text-[#000000] font-semibold text-[10px] sm:text-xs">
                     {step.number}
                   </span>
                 </div>
-                <p className="text-foreground font-semibold text-xs sm:text-[13px] leading-tight">
+                <p className="text-[#000000] font-semibold text-xs sm:text-[13px] leading-tight">
                   {step.text}
                   {step.highlight && (
                     <>
-                      {" "}<span className="text-primary font-bold">{step.highlight}</span>{" "}
+                      {" "}<span className="text-[#B74D77] font-bold">{step.highlight}</span>{" "}
                       {step.textAfter}
                     </>
                   )}
@@ -138,29 +139,29 @@ const FloatingCard = () => {
         {/* Trust indicators */}
         <div className="flex items-center justify-center gap-3 mb-5 animate-fade-in-up-delay-3">
           <div className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-            <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">Verified</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#E27BA0]" />
+            <span className="text-[10px] sm:text-xs font-medium text-[#65535D]">Verified</span>
           </div>
-          <div className="w-1 h-1 rounded-full bg-border" />
+          <div className="w-1 h-1 rounded-full bg-[#E8C6D3]" />
           <div className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-            <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">Secure</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#E27BA0]" />
+            <span className="text-[10px] sm:text-xs font-medium text-[#65535D]">Secure</span>
           </div>
-          <div className="w-1 h-1 rounded-full bg-border" />
+          <div className="w-1 h-1 rounded-full bg-[#E8C6D3]" />
           <div className="flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-            <span className="text-[10px] sm:text-xs font-medium text-muted-foreground">Official</span>
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#E27BA0]" />
+            <span className="text-[10px] sm:text-xs font-medium text-[#65535D]">Official</span>
           </div>
         </div>
 
         {/* FOMO indicator */}
         <div className="flex items-center justify-center gap-1.5 mb-3 animate-fade-in-up-delay-4">
-          <div className="flex items-center gap-1 bg-primary/10 px-2.5 py-1 rounded-full">
-            <Users className="w-3 h-3 text-primary" />
-            <span className="text-[10px] sm:text-xs font-semibold text-primary">
+          <div className="flex items-center gap-1 bg-[#E27BA0]/10 px-2.5 py-1 rounded-full">
+            <Users className="w-3 h-3 text-[#B74D77]" />
+            <span className="text-[10px] sm:text-xs font-semibold text-[#B74D77]">
               {activeViewers} people
             </span>
-            <span className="text-[10px] sm:text-xs text-muted-foreground">
+            <span className="text-[10px] sm:text-xs text-[#65535D]">
               viewing now
             </span>
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
@@ -172,7 +173,7 @@ const FloatingCard = () => {
           href="https://linkthem.net/?offer_id=1177&aff_id=14999&source=target"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-primary text-primary-foreground py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-button hover:opacity-90 transition-all duration-300 animate-pulse-glow animate-fade-in-up-delay-4 relative z-10 group whitespace-nowrap"
+          className="w-full bg-[#E27BA0] text-[#000000] py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-button hover:opacity-90 transition-all duration-300 animate-pulse-glow animate-fade-in-up-delay-4 relative z-10 group whitespace-nowrap"
         >
           <Gift className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
           <span className="uppercase tracking-wide">Start Now</span>
@@ -180,12 +181,12 @@ const FloatingCard = () => {
         </a>
 
         {/* Footer text */}
-        <p className="text-center text-[10px] sm:text-xs text-muted-foreground mt-4 animate-fade-in-up-delay-4">
+        <p className="text-center text-[10px] sm:text-xs text-[#65535D] mt-4 animate-fade-in-up-delay-4">
           💍 Limited time promotion • Terms apply
         </p>
         
         {/* Disclaimer */}
-        <p className="text-center text-[8px] sm:text-[10px] text-muted-foreground/60 mt-3">
+        <p className="text-center text-[8px] sm:text-[10px] text-[#65535D]/60 mt-3">
           This promotion is not sponsored, endorsed, or affiliated with Pandora Corporation.
         </p>
       </div>
